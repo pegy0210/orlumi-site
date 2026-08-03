@@ -57,24 +57,41 @@ Each title is a distinct world with its own tone, visual details and play patter
 
 The brand website should make it easy to add, reorder or feature worlds without redesigning the whole site.
 
-## 6. The Ancient Tree Motif
+## 6. Stability First Principle
 
-A vast, ancient tree quietly connects the Orlumi worlds.
+Existing game work takes priority over new brand lore.
+
+Rules:
+
+- Brand lore must adapt to established gameplay, not force established gameplay to be rewritten.
+- Do not change completed mechanics, progression, UI, art, characters or production assets merely to fit a new universe idea.
+- New lore should be additive, optional and removable without breaking a game.
+- Before proposing a cross-world idea, perform an impact check against every active project.
+- If a new idea requires major rework in **Orlumi: Little Explorer** or **Orlumi: Petal Nook**, redesign or reject the new idea first.
+- Website symbolism may suggest connections that the games never need to explain.
+- A game remains valid even if it contains no explicit ancient-tree reference.
+
+The universe expands around the games. It does not rewrite them.
+
+## 7. The Ancient Tree Motif
+
+A vast, ancient tree may quietly connect the Orlumi worlds.
 
 Rules:
 
 - It currently has no official public name.
+- It is a flexible brand motif, not a mandatory game feature.
 - Do not call it a “World Tree” in public-facing copy unless specifically approved.
 - Do not explain its origin, age, purpose or full appearance.
 - Do not reveal whether it is a tree, a world, a pathway or something else.
 - It is a recurring presence, not the main plot of every game.
 - It may appear through branches, roots, leaves, seeds, wood grain, shadows or distant silhouettes.
-- Different worlds may show different fragments of the same presence.
+- Different worlds may show different fragments, but no existing game must be altered to include them.
 - The complete form should remain unseen until a future story genuinely requires it.
 
-The tree should create recognition before explanation.
+The motif should create recognition before explanation, while remaining fully optional at game level.
 
-## 7. Mystery Principle
+## 8. Mystery Principle
 
 Mystery is created through controlled evidence, not total absence.
 
@@ -94,8 +111,9 @@ Avoid:
 - naming every element too early
 - turning the tree into a secret boss or mandatory central quest
 - pretending ordinary missing information is intentional lore
+- retrofitting completed game content solely to create clues
 
-## 8. Family Inspiration
+## 9. Family Inspiration
 
 The brand may draw private inspiration from Peggy, Fenwick and Persephone, but their names should not be directly combined into public lore names.
 
@@ -111,7 +129,7 @@ The family connection should remain subtle and symbolic through ideas such as:
 
 This is a private creative foundation, not a public naming formula.
 
-## 9. Design Direction
+## 10. Design Direction
 
 The Orlumi visual language combines:
 
@@ -133,7 +151,7 @@ Core palette:
 
 Additional colours may be introduced only when they remain muted and harmonious.
 
-## 10. Motion Direction
+## 11. Motion Direction
 
 Motion should feel alive but never demand attention.
 
@@ -155,7 +173,7 @@ Avoid:
 - excessive particle density
 - animations that compete with reading or children’s focus
 
-## 11. Copy Direction
+## 12. Copy Direction
 
 Voice:
 
@@ -181,7 +199,7 @@ Avoid:
 - unverified release promises
 - claims that all titles share one exact storyline
 
-## 12. Decision Priority
+## 13. Decision Priority
 
 When documents conflict, use this order:
 
@@ -190,16 +208,17 @@ When documents conflict, use this order:
 3. Specialist guides in `/docs`
 4. Existing implementation
 
-Implementation must be updated when it conflicts with the brand bible; the implementation is not the source of truth.
+Exception: established production work in an active game must not be silently overwritten. Any proposed change to it requires an explicit impact review and owner approval.
 
-## 13. Change Control
+## 14. Change Control
 
 Before making a major brand, lore or visual change:
 
 - state what rule is changing
 - explain why
+- complete an impact check for active games
 - update this file first or in the same change
 - update affected specialist documents
 - avoid silent reinterpretation
 
-Last established direction: **Orlumi is a brand home for multiple worlds; the ancient tree remains unnamed and unexplained.**
+Last established direction: **Orlumi is a brand home for multiple worlds; the ancient tree remains unnamed, unexplained and optional at game level. Existing game work must not be rewritten to serve brand lore.**
