@@ -6,9 +6,9 @@
   "workers_dev": false,
   "preview_urls": false,
   "routes": [
-    { "pattern": "angel.orlumi.app", "custom_domain": true }
-  ],
-  "secrets": {
-    "required": ["ORACLE_PASSWORD_HASH", "ORACLE_SESSION_KEY"]
-  }
+    {
+      "pattern": "angel.orlumi.app",
+      "custom_domain": true
+    }
+  ]
 }
