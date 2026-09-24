@@ -43,3 +43,31 @@ test('the app fails closed when secrets are missing', async () => {
   const response = await worker.fetch(new Request(base), {});
   assert.equal(response.status, 503);
 });
+
+test('AI trial requires sign-in and uses canonical card meaning', async () => {
+  const payload = { question: '我應否轉工？', cards: ['Abundance'] };
+  const aiRequest = cookie => new Request(base + 'api/ai-reading', {
+    method: 'POST',
+    headers: { 'content-type': 'application/json', ...(cookie ? { cookie } : {}) },
+    body: JSON.stringify(payload),
+  });
+  assert.equal((await worker.fetch(aiRequest(), env)).status, 401);
+  const cookie = (await post(pass)).headers.get('set-cookie');
+  let calls = 0;
+  const withAI = {
+    ...env,
+    AI: { run: async (model, input) => {
+      calls++;
+      assert.equal(model, '@cf/qwen/qwen3-30b-a3b-fp8');
+      assert.match(input.messages[1].content, /金錢以外的資源與支持/);
+      return { response: '請先盤點資源，再比較轉工選項。' };
+    } },
+  };
+  const ok = await worker.fetch(aiRequest(cookie), withAI);
+  assert.equal(ok.status, 200);
+  assert.match((await ok.json()).reading, /盤點資源/);
+  assert.equal(calls, 1);
+  payload.cards = ['Card not in deck'];
+  assert.equal((await worker.fetch(aiRequest(cookie), withAI)).status, 400);
+  assert.equal(calls, 1);
+});
